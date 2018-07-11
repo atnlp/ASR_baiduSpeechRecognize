@@ -181,7 +181,6 @@ def alignedPrint(list, r, h, result):
     print("WER: " + result)
 
 
-
 def wer(r, h):
     """
     This is a function that calculate the word error rate in ASR.
@@ -200,15 +199,24 @@ def wer(r, h):
     return result
 
 
-
 if __name__ == '__main__':
     # filename1 = sys.argv[1]
     # filename2 = sys.argv[2]
-    filename1 = open('reference1.txt')
-    filename2 = open('hypothesis1.txt')
-    # r = file(filename1).read().split()
-    # h = file(filename2).read().split()
+    filename1 = open('text1.txt')
+    filename2 = open('text2.txt')
 
+    '''
+    If your test file is plain English text, use the split function as follows to segment the word, 
+    then call the wer function to perform the WER test.
+    '''
+    # r = filename1.read().split()
+    # h = filename2.read().split()
+
+
+    '''
+    If your test file is Chinese text, use the following code to convert the text to a 
+    single-character representation, then call the wer function to perform the WER test.
+    '''
     r = filename1.read()
     r_list = []
     for s in r:
@@ -219,4 +227,5 @@ if __name__ == '__main__':
     for s in h:
         h_list.append(s)
 
+    # wer test
     wer(r_list, h_list)
