@@ -1,6 +1,6 @@
 # ASR_baiduSpeechRecognize
 
-#### 调用百度语音识别API，Python SDK。并评估WER词错误率。
+#### 调用百度语音识别API，Python SDK。并评估WER词错误率
 
 - S0002文件夹内部存放的是标准的符合语音识别格式要求的音频文件
 - transcripy: 存放对应S0002文件夹中音频对应的文字信息
@@ -11,3 +11,5 @@
 - Baidu_ASR.ipynb    Baidu_ASR.py  调用百度语音识别并评估字错误率
 
 - 注：APP_ID, API_KEY, SECRET_KEY 改成自己百度语音识别的ID和KEY
+
+##### 运行方法：可直接运行Baidu_ASR.py或Baidu_ASR.ipynb对语音识别接口进行测试
